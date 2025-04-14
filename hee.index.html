@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>認識 ENHYPEN</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Cinzel Decorative', cursive;
+      background: linear-gradient(to bottom, #1a1a1a, #330000);
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #000;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #800000;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #b30000;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    #lang-selector {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a0000;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff0000;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .member-card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border: 1px solid #800000;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px #b30000;
+    }
+
+    .member-name {
+      font-size: 1.5rem;
+      color: #ffcccc;
+    }
+
+    .interactive-btn {
+      background-color: #800000;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .interactive-btn:hover {
+      background-color: #b30000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a0000;
+      border-top: 1px solid #800000;
+      color: #999;
+    }
+
+    .lang { display: none; }
+    .lang.zh { display: block; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="lang zh">ENHYPEN：吸血鬼的魅力</span><span class="lang en">ENHYPEN: The Charm of Vampires</span><span class="lang ko">ENHYPEN: 뱀파이어의 매력</span></h1>
+    <select id="lang-selector" onchange="switchLang(this.value)">
+      <option value="zh">🌕 中文</option>
+      <option value="en">🌑 English</option>
+      <option value="ko">🦇 한국어</option>
+    </select>
+  </header>
+
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#members">Members</a>
+    <a href="#interact">Play</a>
+  </nav>
+
+  <section id="intro">
+    <h2><span class="lang zh">團體介紹</span><span class="lang en">About the Group</span><span class="lang ko">그룹 소개</span></h2>
+    <p>
+      <span class="lang zh">ENHYPEN 是來自韓國的男子音樂組合，於2020年透過選秀節目《I-LAND》出道。他們的音樂融合了現代流行、舞曲與神秘感，特別是吸血鬼世界觀更讓人著迷。</span>
+      <span class="lang en">ENHYPEN is a South Korean boy band formed through the reality show "I-LAND" in 2020. Their music blends modern pop, dance, and mystery, especially drawing fans into their vampire-themed universe.</span>
+      <span class="lang ko">ENHYPEN은 2020년 리얼리티 프로그램 'I-LAND'를 통해 결성된 한국 보이 그룹입니다. 이들의 음악은 현대 팝과 댄스, 신비로운 세계관, 특히 뱀파이어 콘셉트로 많은 팬들을 사로잡고 있습니다.</span>
+    </p>
+  </section>
+
+  <section id="members">
+    <h2><span class="lang zh">成員介紹</span><span class="lang en">Members</span><span class="lang ko">멤버 소개</span></h2>
+    <div class="member-card">
+      <div class="member-name">JUNGWON</div>
+      <p><span class="lang zh">隊長，擁有強烈的舞台魅力與領導能力。</span><span class="lang en">Leader with strong stage charisma and leadership skills.</span><span class="lang ko">카리스마 넘치는 리더이자 뛰어난 리더십의 소유자.</span></p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">HEESEUNG</div>
+      <p><span class="lang zh">主唱與全能型成員，聲音穿透力強。</span><span class="lang en">Main vocalist and all-rounder with a powerful voice.</span><span class="lang ko">메인보컬이자 올라운더, 강렬한 보이스의 소유자.</span></p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">JAY</div>
+      <p><span class="lang zh">韓美混血的個性成員，擁有獨特的表演風格。</span><span class="lang en">Korean-American with a unique and expressive performance style.</span><span class="lang ko">독특한 개성과 퍼포먼스를 가진 한미 혼혈 멤버.</span></p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">JAKE</div>
+      <p><span class="lang zh">有著溫柔嗓音與穩定台風，來自澳洲。</span><span class="lang en">Warm voice and steady stage presence, from Australia.</span><span class="lang ko">부드러운 음색과 안정된 무대매너를 가진 호주 출신 멤버.</span></p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">SUNGHOON</div>
+      <p><span class="lang zh">冰王子般的外貌，曾是花式滑冰選手。</span><span class="lang en">Elegant visual with a past in figure skating.</span><span class="lang ko">피겨 선수 출신, 얼음왕자 같은 외모의 소유자.</span></p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">SUNOO</div>
+      <p><span class="lang zh">甜美笑容與豐富表情的魅力擔當。</span><span class="lang en">Charming with a sweet smile and expressive face.</span><span class="lang ko">달콤한 미소와 풍부한 표정의 매력 보컬.</span></p>
+    </div>
+    <div class="member-card">
+      <div class="member-name">NI-KI</div>
+      <p><span class="lang zh">來自日本的天才舞者，是最年輕的成員。</span><span class="lang en">Genius dancer from Japan and the youngest member.</span><span class="lang ko">일본 출신의 천재 댄서이자 막내.</span></p>
+    </div>
+  </section>
+
+  <section id="interact">
+    <h2><span class="lang zh">互動小遊戲</span><span class="lang en">Interactive Game</span><span class="lang ko">인터랙티브 게임</span></h2>
+    <p><span class="lang zh">點擊下方按鈕，選擇你的吸血鬼搭檔！</span><span class="lang en">Click the button to find your vampire partner!</span><span class="lang ko">버튼을 눌러 당신의 뱀파이어 파트너를 찾아보세요!</span></p>
+    <button class="interactive-btn" onclick="choosePartner()"><span class="lang zh">選擇搭檔</span><span class="lang en">Choose Partner</span><span class="lang ko">파트너 선택</span></button>
+    <p id="result"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 ENHYPEN | <span class="lang zh">吸血鬼風格設計</span><span class="lang en">Vampire Theme Design</span><span class="lang ko">뱀파이어 테마 디자인</span></p>
+  </footer>
+
+  <script>
+    function choosePartner() {
+      const members = ["JUNGWON", "HEESEUNG", "JAY", "JAKE", "SUNGHOON", "SUNOO", "NI-KI"];
+      const chosen = members[Math.floor(Math.random() * members.length)];
+      const lang = document.querySelector('select').value;
+      const prefix = {
+        zh: '你的吸血鬼搭檔是：',
+        en: 'Your vampire partner is: ',
+        ko: '당신의 뱀파이어 파트너는: '
+      };
+      document.getElementById("result").textContent = prefix[lang] + chosen + "!";
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.querySelectorAll(`.lang.${lang}`).forEach(el => el.style.display = 'block');
+    }
+  </script>
+</body>
+</html>
